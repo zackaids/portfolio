@@ -19,12 +19,14 @@
 <script>
 import AboutComponent from './portfolio/AboutComponent.vue'
 import ProjectsComponent from './portfolio/ProjectsComponent.vue'
+import ExperienceComponent from './portfolio/ExperienceComponent.vue'
 
 export default {
   name: 'NetworkBackground',
   components: {
     AboutComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    ExperienceComponent
   },
   data() {
     return {
@@ -83,7 +85,8 @@ export default {
     createPortfolioNodes() {
       const sections = [
         { id: 'about', label: 'About', component: 'AboutComponent', color: [255, 100, 100] },
-        { id: 'projects', label: 'Projects', component: 'ProjectsComponent', color: [100, 255, 100]}
+        { id: 'projects', label: 'Projects', component: 'ProjectsComponent', color: [100, 255, 100]},
+        { id: 'experience', label: 'Experience', component: 'ExperienceComponent', color: [100, 100, 255]}
       ]
 
       // Position nodes in different quadrants with orbital centers
