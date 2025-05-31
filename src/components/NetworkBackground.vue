@@ -20,13 +20,15 @@
 import AboutComponent from './portfolio/AboutComponent.vue'
 import ProjectsComponent from './portfolio/ProjectsComponent.vue'
 import ExperienceComponent from './portfolio/ExperienceComponent.vue'
+import ContactComponent from './portfolio/ContactComponent.vue'
 
 export default {
   name: 'NetworkBackground',
   components: {
     AboutComponent,
     ProjectsComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    ContactComponent
   },
   data() {
     return {
@@ -67,7 +69,7 @@ export default {
 
     createParticles() {
       this.particles = []
-      const particleCount = Math.floor((window.innerWidth * window.innerHeight) / 16000)
+      const particleCount = Math.floor((window.innerWidth * window.innerHeight) / 8000)
 
       for (let i = 0; i < particleCount; i++) {
         this.particles.push({
@@ -86,7 +88,8 @@ export default {
       const sections = [
         { id: 'about', label: 'About', component: 'AboutComponent', color: [255, 100, 100] },
         { id: 'projects', label: 'Projects', component: 'ProjectsComponent', color: [100, 255, 100]},
-        { id: 'experience', label: 'Experience', component: 'ExperienceComponent', color: [100, 100, 255]}
+        { id: 'experience', label: 'Experience', component: 'ExperienceComponent', color: [100, 100, 255]},
+        { id: 'contact', label: 'Contact', component: 'ContactComponent', color: [255, 255, 100]}
       ]
 
       // Position nodes in different quadrants with orbital centers
